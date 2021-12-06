@@ -1,0 +1,14 @@
+<div class="chat-box-container">
+  <div class="chat-messages-container">
+    <ul *ngFor="let message of messages">
+      <li>
+          {{message}}
+      </li>  
+    </ul>
+  </div>
+  
+  <div class="chat-input-container">
+    <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && send()" />
+    <button class="chat-input-send-btn" (click)="send()">SEND</button>
+  </div>
+</div>
