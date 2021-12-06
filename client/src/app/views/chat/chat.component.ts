@@ -12,4 +12,8 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleSendMessageIntent() {
+    console.log('SENT')
+  }
+
 }
