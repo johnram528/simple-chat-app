@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./chat-box.component.scss']
 })
 export class ChatBoxComponent implements OnInit {
-  messages: string[] = ["hi", "hello"];
+  messages: string[] = [];
   newMessage: string = '';
   @Output() sendMessageIntent = new EventEmitter();
 
