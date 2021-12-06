@@ -6,6 +6,20 @@
   min-height: 400px;
 }
 
+.chat-input-container {
+  border-top: 1px solid #ddd;
+}
+
 .chat-input {
   width: 80%;
+  border: 1px solid rgb(136, 206, 209);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.chat-input-send-btn {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }

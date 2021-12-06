@@ -13,6 +13,14 @@ ul { list-style-type: none; }
   height: 100%;
 }
 
+.bg-primary {
+  background-color: #007d8c;
+}
+
+.bg-secondary {
+  background-color: rgb(136, 206, 209);
+}
+
 .flex {
   display: flex;
 }

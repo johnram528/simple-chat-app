@@ -7,8 +7,8 @@
     </ul>
   </div>
   
-  <div class="chat-input-container flex jc-space-around padding-sm">
+  <div class="chat-input-container flex jc-space-around padding-sm bg-secondary">
     <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && send()" class="chat-input" />
-    <button class="chat-input-send-btn" (click)="send()">SEND</button>
+    <button class="chat-input-send-btn bg-primary" (click)="send()">SEND</button>
   </div>
 </div>
