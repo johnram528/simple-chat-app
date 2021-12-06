@@ -1,1 +1,5 @@
-<app-chat-box (sendMessageIntent)="handleSendMessageIntent()" class="full-height"></app-chat-box>
+<app-chat-box 
+  (sendMessageIntent)="handleSendMessageIntent($event)" 
+  class="full-height"
+  [messages]="messages"
+></app-chat-box>

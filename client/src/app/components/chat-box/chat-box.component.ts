@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-chat-box',
@@ -6,9 +6,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./chat-box.component.scss']
 })
 export class ChatBoxComponent implements OnInit {
-  messages: string[] = [];
-  newMessage: string = '';
+  @Input() messages: string[] = [];
   @Output() sendMessageIntent = new EventEmitter();
+  newMessage: string = '';
 
   constructor() { }
 
@@ -17,7 +17,10 @@ export class ChatBoxComponent implements OnInit {
   }
 
   send() {
-    this.sendMessageIntent.emit();
+    if(this.newMessage.length) {
+      this.sendMessageIntent.emit(this.newMessage);
+      this.newMessage = '';
+    }
   }
 
 }
