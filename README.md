@@ -4,7 +4,8 @@
 node server/index.js
 
 ## Starting the client
-cd client
+cd client\
+npm install\
 npm start
 
 ## Usage
