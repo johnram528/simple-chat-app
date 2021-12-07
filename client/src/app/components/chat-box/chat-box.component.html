@@ -2,7 +2,9 @@
   <div class="chat-messages-container padding-sm">
     <ul *ngFor="let message of messages">
       <li>
-          {{message.body}}
+        <div [ngClass]="{'chat-message-row-sender': message.sender.id === user.id, 'chat-message-row-recipient': message.recipient.id === user.id }">
+          <span class="chat-message-item">{{message.body}} <span class="chat-message-datetime">{{message.datetime | date:'short'}}</span></span>
+        </div>
       </li>  
     </ul>
   </div>

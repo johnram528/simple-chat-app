@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Message } from 'src/app/models/message.interface';
+import { User } from 'src/app/models/user.interface';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Message } from 'src/app/models/message.interface';
 })
 export class ChatBoxComponent implements OnInit {
   @Input() messages: Message[] = [];
+  @Input() user!: User;
   @Output() sendMessageIntent = new EventEmitter();
   newMessage: string = '';
 

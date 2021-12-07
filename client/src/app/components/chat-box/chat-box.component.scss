@@ -23,3 +23,26 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.chat-message-row-sender {
+  text-align: right;
+
+  span{
+    background-color: rgb(136, 206, 209);
+  }
+}
+
+.chat-message-row-recipient {
+  span{
+    background-color:#ddd;
+  }
+}
+
+.chat-message-item {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.chat-message-datetime {
+  font-size: 11px;
+}
