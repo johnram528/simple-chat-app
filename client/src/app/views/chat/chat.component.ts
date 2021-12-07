@@ -25,8 +25,6 @@ export class ChatComponent implements OnInit {
 
   handleSendMessageIntent(message:string): void {
     this.chatService.send(this._mapToMsgObject(message, this.user, this.contact));
-    console.log(this.user);
-    console.log(this.contact)
   }
 
   private _mapToMsgObject(message: string, sender: User, recipient: User): Message {

@@ -1,1 +1,4 @@
+<select style="margin-bottom: -10px" name="userList" [(ngModel)]="user" (change)="toggleContactOnUserChange()">
+  <option *ngFor="let userItem of userList" [ngValue]="userItem" [selected]="userItem.id === user.id">{{userItem.name}}</option>
+</select>
 <app-chat class="full-height" [user]="user" [contact]="contact"></app-chat>
