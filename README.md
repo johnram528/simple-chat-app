@@ -1,6 +1,6 @@
 # simple-chat-app
 
-##Starting the server
+## Starting the server
 node server/index.js
 
 ## Starting the client
