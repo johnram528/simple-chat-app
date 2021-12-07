@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { io } from "socket.io-client";
+import { Message } from '../models/message.interface';
 
 
 @Injectable({
@@ -8,17 +9,21 @@ import { io } from "socket.io-client";
 })
 export class ChatService {
 
-  message$: BehaviorSubject<string> = new BehaviorSubject('');
+  message$: BehaviorSubject<Message> = new BehaviorSubject({
+    body: '', 
+    sender: {id: 0, name: ''}, 
+    recipient: {id: 0, name: ''}, 
+  });
   constructor() {}
 
   socket = io('http://localhost:3000');
 
-  send(message: string) {
+  send(message: Message) {
     this.socket.emit('message', message);
   }
 
   getMessage() {
-    this.socket.on('message', (message) =>{
+    this.socket.on('message', (message: Message) =>{
       this.message$.next(message);
     });
     
